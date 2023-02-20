@@ -10,7 +10,7 @@ nodeGroups:
     instanceType: t2.medium
     desiredCapacity: 4
     minSize: 1
-    maxSize: 3
+    maxSize: 4
     volumeSize: 50
     volumeType: gp2
     availabilityZones: ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
