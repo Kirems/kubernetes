@@ -33,5 +33,5 @@ spec:
     app: mongodb
   ports:
     - name: mongoport
-      port: 27018
+      port: 27017
   type: ClusterIP
