@@ -44,7 +44,7 @@ metadata:
   name: teamcity-agent
 spec:
   selector:
-    app: teamcity-agent
+    app: agent2  # modified to app: agent2
   ports:
   - protocol: TCP
     port: 9090
@@ -54,19 +54,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: teamcity-agent
+  name: agent2  # modified to name: agent2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: teamcity-agent
+      app: agent2  # modified to app: agent2
   template:
     metadata:
       labels:
-        app: teamcity-agent
+        app: agent2  # modified to app: agent2
     spec:
       containers:
-      - name: teamcity-agent
+      - name: teamcity-agent  # modified to name: teamcity-agent
         image: jetbrains/teamcity-agent
         env:
         - name: SERVER_URL
